@@ -1,0 +1,87 @@
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> hash_table;
+        for (int i = 0; i < nums.size(); i++) {
+            hash_table[nums[i]] = i;
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (hash_table.count(complement) && hash_table[complement] != i) {
+                return {i, hash_table[complement]};
+            }
+        }
+        return {}; // No solution found
+    }
+};
+
+
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> hash_table;
+        for (int i = 0; i < nums.size(); i++) {
+            hash_table[nums[i]] = i;
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (hash_table.count(complement) && hash_table[complement] != i) {
+                return {i, hash_table[complement]};
+            }
+        }
+        return {}; // No solution found
+    }
+};
+
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> hash_table;
+        for (int i = 0; i < nums.size(); i++) {
+            hash_table[nums[i]] = i;
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (hash_table.count(complement) && hash_table[complement] != i) {
+                return {i, hash_table[complement]};
+            }
+        }
+        return {}; // No solution found
+    }
+};
+
+
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> hash_table;
+        // Build a hash table of the values in the input array
+        for (int i = 0; i < nums.size(); i++) {
+            hash_table[nums[i]] = i;
+        }
+        // Check for a complement of the target value in the hash table
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            // Make sure the complement is not the same as the current value
+            if (hash_table.count(complement) && hash_table[complement] != i) {
+                // Return the indices of the current value and its complement
+                return {i, hash_table[complement]};
+            }
+        }
+        // No solution found
+        return {};
+    }
+};
+
